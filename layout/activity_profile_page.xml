@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profilePages.ProfilePage"
+    android:background="@drawable/ic_profile_bg">
+
+    <include layout="@layout/home_action_bar"/>
+
+    <ImageView
+        android:id="@+id/profileFace"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/ic_account_circle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Name"
+        android:fontFamily="@font/poppins_semibold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileFace"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="202dp"
+        android:layout_height="35dp"
+        android:background="@drawable/white_rounded_border_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usernameTextView"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:elevation="5dp">
+
+        <Button
+            android:id="@+id/profileButton"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@drawable/pink_rounded_bg"
+            android:text="Profile"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginLeft="2dp"
+            android:elevation="10dp"/>
+
+        <Button
+            android:id="@+id/exploreButton"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@drawable/transparent_rounded_bg"
+            android:text="Explore"
+            android:textAllCaps="false"
+            android:textColor="#A8A7A7"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginRight="2dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/aboutMeButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_long_round_grad_pink_bg"
+        android:text="About Me"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/poppins_semibold"
+        android:elevation="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        android:layout_marginTop="50dp"/>
+
+    <Button
+        android:id="@+id/dashboeardButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_long_round_grad_pink_bg"
+        android:text="Dashboard"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/poppins_semibold"
+        android:elevation="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aboutMeButton"
+        android:layout_marginTop="20dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

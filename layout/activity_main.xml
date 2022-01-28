@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExplorePage">
+
+    <include
+        layout="@layout/home_action_bar"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="37dp" />
+
+    <ImageView
+        android:id="@+id/profileFace"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/ic_account_circle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Name"
+        android:fontFamily="@font/poppins_semibold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileFace"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="202dp"
+        android:layout_height="35dp"
+        android:background="@drawable/white_rounded_border_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usernameTextView"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:elevation="5dp">
+
+        <Button
+            android:id="@+id/profileButton"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@drawable/transparent_rounded_bg"
+            android:text="Profile"
+            android:textAllCaps="false"
+            android:textColor="#A8A7A7"
+            android:fontFamily="@font/poppins_semibold"
+            android:elevation="10dp"/>
+
+        <Button
+            android:id="@+id/exploreButton"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@drawable/pink_rounded_bg"
+            android:text="Explore"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginRight="2dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/materialCard"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:backgroundTint="#4184F2"
+                android:elevation="50dp"
+                app:cardCornerRadius="25dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/oppertunitiesCard">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/text1"
+                        android:src="@drawable/material_icon"/>
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Materials"
+                        android:textColor="#ffffff"
+                        android:textSize="15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/image1"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/projectCard"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:backgroundTint="#6C6780"
+                android:elevation="25dp"
+                app:cardCornerRadius="25dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/oppertunitiesCard"
+                app:layout_constraintLeft_toRightOf="@id/announcementsCard">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image4"
+                        android:layout_gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/text4"
+                        android:src="@drawable/projects_icon"/>
+
+                    <TextView
+                        android:id="@+id/text4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Projects"
+                        android:textColor="#ffffff"
+                        android:textSize="15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/image4"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/announcementsCard"
+                android:layout_width="170dp"
+                android:layout_height="250dp"
+                android:backgroundTint="#F57A78"
+                android:elevation="25dp"
+                app:cardCornerRadius="25dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/materialCard"
+                app:layout_constraintRight_toLeftOf="@id/projectCard">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:layout_gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/text3"
+                        android:src="@drawable/announce_icon"/>
+
+                    <TextView
+                        android:id="@+id/text3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Announcements"
+                        android:textColor="#ffffff"
+                        android:textSize="15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/image3"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/oppertunitiesCard"
+                android:layout_width="170dp"
+                android:layout_height="250dp"
+                android:backgroundTint="#FD9340"
+                android:elevation="25dp"
+                app:cardCornerRadius="25dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/materialCard">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/text2"
+                        android:src="@drawable/opppertunities_icon"/>
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Opportunities"
+                        android:textColor="#ffffff"
+                        android:textSize="15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/image2"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="-88dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
